@@ -33,8 +33,8 @@ jobs:
       uses: garygrossgarten/github-action-ssh@release
       with:
         command: |
-          chown web24:client1 /var/www/clients/client1/web24/web -hR
-          cd /var/www/clients/client1/web24/web
+          chown web33:client1 /var/www/clients/client1/web33/web -hR
+          cd /var/www/clients/client1/web33/web
           composer install
         host: rboer.nl
         username: root
