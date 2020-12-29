@@ -27,7 +27,7 @@ jobs:
         passphrase: ${{ secrets.SSH_KEY_VPS_PASSPHRASE }}   
         port: 22
         source: ./*
-        target: /var/www/clients/client1/web24/web/
+        target: /var/www/clients/client1/web33/web/
 
     - name: SSH Commands
       uses: garygrossgarten/github-action-ssh@release
