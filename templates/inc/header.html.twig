@@ -1,14 +1,11 @@
-<!-- Page Header-->
 <header class="page-header page-header-dark bg-gradient-primary-to-secondary">
     <div class="page-header-content pt-10">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6" data-aos="fade-up">
-                    <h1 class="page-header-title">Build your next project faster with SB UI Kit Pro</h1>
-                    <p class="page-header-text mb-5">Welcome to SB UI Kit Pro, a toolkit for building beautiful web interfaces, created by the development team at Start Bootstrap</p>
-                    <a class="btn btn-teal font-weight-500 mr-2" href="index.html">View Pages<i class="ml-2" data-feather="arrow-right"></i></a><a class="btn btn-link" href="https://docs.startbootstrap.com/sb-ui-kit-pro/quickstart">Documentation</a>
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="page-header-title mb-3">{% if header.title is defined %} {{ header.title }} {% else %} No header found {% endif %}</h1>
+                    <p class="page-header-text">{% if header.text is defined %} {{ header.text }} {% else %} No header text found {% endif %}</p>
                 </div>
-                <div class="col-lg-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="100"><img class="img-fluid" src="assets/img/illustrations/windows.svg" /></div>
             </div>
         </div>
     </div>

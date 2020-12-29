@@ -8,7 +8,6 @@
         <meta name="author" content="" />
         <title>{% block title %}Infinite Dream - EU{% endblock %}</title>
         <link href="css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
         <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.24.1/feather.min.js" crossorigin="anonymous"></script>
@@ -24,9 +23,7 @@
                     {% block javascripts %}{% endblock %}
                 </main>
             </div>
-            <div>
-            Footer
-            </div>
+            {% include 'inc/footer.html.twig' %}
         </div>
     </body>
 </html>
