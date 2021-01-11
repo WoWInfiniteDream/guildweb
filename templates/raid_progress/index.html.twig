@@ -3,9 +3,23 @@
 {% block title %}Hello RaidProgressController!{% endblock %}
 
 {% block body %}
-{% if (wowProgressGuild.status == 1) %}
-{{ dump(wowProgressGuild.data) }}
-{% else %}
-No progress found
-{% endif %}
+    {% if (wowProgressGuild.status == 1) %}
+        <pre>
+        Guild name: {{ wowProgressGuild.data.name }}
+        Faction: {{ wowProgressGuild.data.faction }}
+        Region: {{ wowProgressGuild.data.region }}
+        Realm: {{ wowProgressGuild.data.realm }}
+        Last updated at: {{ wowProgressGuild.data.last_crawled_at }}
+        Profile URL: {{ wowProgressGuild.data.profile_url }}
+        Raid progression: 
+        Current raid: {{ wowProgressRaid.data.name }}
+        Summary: {{ currentProgress.summary }}
+        Total bosses: {{ currentProgress.total_bosses }}
+        Normal bosses killed: {{ currentProgress.normal_bosses_killed }}
+        Heroic bosses killed: {{ currentProgress.heroic_bosses_killed }}
+        Mythic bosses killed: {{ currentProgress.mythic_bosses_killed }}
+        </pre>
+    {% else %}
+        No progress found
+    {% endif %}
 {% endblock %}
