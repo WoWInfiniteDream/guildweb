@@ -20,8 +20,9 @@ class RaidProgressController extends AbstractController
         $this->client = $client;
     }
 
+
     /**
-     * @Route("/raid/progress", name="raid_progress")
+     * @Route("/progress/raid", name="raid_progress")
      */
     public function index(): Response
     {

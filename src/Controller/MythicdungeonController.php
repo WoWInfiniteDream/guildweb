@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class MythicdungeonController extends AbstractController
 {
     /**
-     * @Route("/mythicdungeon", name="mythicdungeon")
+     * @Route("/progress/dungeon", name="mythicdungeon")
      */
 
     //This page will pull the current data from wowprogress but have to decide what exactly will be pulled.

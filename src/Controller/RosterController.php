@@ -8,6 +8,8 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class RosterController extends AbstractController
 {
+    //Let's start building the roster :)
+
     /**
      * @Route("/roster", name="roster")
      */
