@@ -8,7 +8,7 @@
                 <li class="nav-item dropdown no-caret">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownDocs" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Progress<i class="fas fa-chevron-right dropdown-arrow"></i></a>
                     <div class="dropdown-menu dropdown-menu-right animated--fade-in-up" aria-labelledby="navbarDropdownDocs">
-                        <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-ui-kit-pro/quickstart" target="_blank"
+                        <a class="dropdown-item py-3" href="{{ url('raid_progress')}}"
                             ><div class="icon-stack bg-primary-soft text-primary mr-4"><i data-feather="book-open"></i></div>
                             <div>
                                 <div class="small text-gray-500">Raid</div>
@@ -16,13 +16,24 @@
                             </div></a
                         >
                         <div class="dropdown-divider m-0"></div>
-                        <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-ui-kit-pro/components" target="_blank"
+                        <a class="dropdown-item py-3" href="{{ url('mythicdungeon')}}"
                             ><div class="icon-stack bg-primary-soft text-primary mr-4"><i data-feather="code"></i></div>
                             <div>
                                 <div class="small text-gray-500">Dungeon</div>
                                 View our top x mythic dungeon members
                             </div></a
                         >
+                    </div>
+                </li>
+                <li class="nav-item dropdown no-caret">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownDocs" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Guild<i class="fas fa-chevron-right dropdown-arrow"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right animated--fade-in-up" aria-labelledby="navbarDropdownDocs">
+                        <a class="dropdown-item py-3" href="{{ url('roster')}}"
+                            ><div class="icon-stack bg-primary-soft text-primary mr-4"><i data-feather="book-open"></i></div>
+                            <div>
+                                <div class="small text-gray-500">Roster</div>
+                                View our raid roster
+                            </div></a>
                     </div>
                 </li>
             </ul>

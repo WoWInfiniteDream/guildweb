@@ -31,7 +31,7 @@ class RaidProgressController extends AbstractController
         //Also should pull the data for the current raid from the API that way, no typo's can be made.
         $responseWowProgress = $this->client->request(
             'GET',
-            'https://raider.io/api/v1/guilds/profile?region=eu&realm=argent-dawn&name=Infinite%20Dream&fields=raid_progression'
+            'https://raider.io/api/v1/guilds/profile?region=eu&realm=argent-dawn&name=The%20Templars&fields=raid_progression'
         );
         //Checking what status code we get back
         $statusCodeWowProgress = $responseWowProgress->getStatusCode();
@@ -43,9 +43,11 @@ class RaidProgressController extends AbstractController
             $wowProgressGuild['data'] = json_decode($wowProgress_guild_json);
         }
 
+        $exp_id = '8';
+
         $responseWowProgressRaidInfo = $this->client->request(
             'GET',
-            'https://raider.io/api/v1/raiding/static-data?expansion_id=8'
+            'https://raider.io/api/v1/raiding/static-data?expansion_id='.$exp_id
         );
         //Checking what status code we get back
         $statusCodeWowProgressRaidInfo = $responseWowProgressRaidInfo->getStatusCode();

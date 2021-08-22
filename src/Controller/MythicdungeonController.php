@@ -16,6 +16,9 @@ class MythicdungeonController extends AbstractController
     //Ideally, all of the users that want to show there data should be shown here. 
     public function index(): Response
     {
+
+        //https://eu.api.blizzard.com/profile/wow/character/argent-dawn/shoftiel/mythic-keystone-profile?namespace=profile-eu&locale=en_US&access_token=US2aX5g0DjvyJYjZHBHuPYbYWymjqEHNlI
+
         return $this->render('mythicdungeon/index.html.twig', [
             'controller_name' => 'MythicdungeonController',
         ]);
