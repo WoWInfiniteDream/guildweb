@@ -14,7 +14,7 @@ class RecruitmentController extends AbstractController
     public function index(): Response
     {
         return $this->render('recruitment/index.html.twig', [
-            'controller_name' => 'RecruitmentController',
+            'socialRecruitment' => true,
         ]);
     }
 }

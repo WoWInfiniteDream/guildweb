@@ -3,16 +3,30 @@
 {% block title %}Hello RecruitmentController!{% endblock %}
 
 {% block body %}
-Recruiting:
+Recruiting for raiding:
 <br /><br />
 Tanks:
+<br />
+Choice between any tank and specific classes
 <br /><br />
 Healers:
+<br />
+Choice between any healer and specific classes
 <br /><br />
 Melee DPS:
+<br />
+Choice between any melee DPS and specific classes/specs
 <br /><br />
 Ranged DPS:
+<br />
+Choice between any ranged DPS and specific classes/specs
 <br /><br />
 <br />
-*** Section about socials here ***
+*** Section about socials here ***<br />
+{% if socialRecruitment == true %}
+The text for this section will be loaded from the database. That way, we can change it like we want it.<br />
+Also we will be able to turn on/off the social section in the database however we want.
+{% else %}
+Not recruiting text here.
+{% endif %}
 {% endblock %}
