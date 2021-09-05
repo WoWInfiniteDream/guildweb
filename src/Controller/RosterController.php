@@ -37,6 +37,10 @@ class RosterController extends AbstractController
             'GET',
             'https://eu.api.blizzard.com/data/wow/guild/argent-dawn/the-templars/roster?namespace=profile-eu&locale=en_GB&access_token=USveBLo2UTC0YiFvE56guxUnWSoFK34wk8'
         );
+
+        $wowGuildRoster['status'] = false;
+        $wowGuildRoster['data'] = '';
+
         //Checking what status code we get back
         $statusCodeWowGuildRoster = $responseWowGuildRoster->getStatusCode();
         if($statusCodeWowGuildRoster == 200)
@@ -45,6 +49,11 @@ class RosterController extends AbstractController
 
             $wowGuildRoster['status'] = true;
             $wowGuildRoster['data'] = json_decode($wowGuild_Roster_json);
+        }
+        else
+        {
+            echo $statusCodeWowGuildRoster."<br />";
+            die('Cant connect to API');
         }
         
         return $this->render('roster/index.html.twig', [
